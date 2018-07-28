@@ -29,7 +29,7 @@ def setup(host_name):
     client = mqtt.Client()
     client.on_connect = on_connect
     client.on_message = on_message
-    client.username_pw_set(username='********', password='********')
+    client.username_pw_set(username='team6', password='20182018')
     client.connect(host_name)
     client.loop_start()
 
@@ -55,7 +55,7 @@ def resp_handler(label, prob, index):
 def main():
     global resp_callback
 
-    setup('********')
+    setup('team6.sws3009.bid')
     resp_callback = resp_handler
 
     camera = PiCamera()
